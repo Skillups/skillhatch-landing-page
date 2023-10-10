@@ -784,3 +784,16 @@ a {
     font-size: 38px;
   }
 }
+
+.cookie-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  background: #eee; 
+  padding: 10px; 
+  text-align: center; 
+  z-index: 10000; 
+  display: none;
+
+}

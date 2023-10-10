@@ -40,7 +40,7 @@
           <a href="#" aria-current="page" class="w-inline-block w--current mr-lg">
             <div class="logo">SkillHatch</div>
           </a>
-          <a href="index.html" class="u">Za mlade</a>
+          <a href="/index.html" class="u">Za mlade</a>
         </div>
         <!--
         <div class="column align-right">
@@ -164,9 +164,27 @@
       </div>
     </div>
   </div>
+  <div id="cookie-consent-banner" class="cookie-consent-banner">
+    Ta spletna stran uporablja piškotke za izboljšanje uporabniške izkušnje. Z uporabo naše spletne strani soglašate z vsemi piškotki v skladu z našo politiko piškotkov.
+    <button onclick="acceptCookies()">Strinjam se</button>
+  </div>
+
   <script>
     feather.replace();
+
+    // Cookie Consent Script
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!localStorage.getItem('cookie-consent-accepted')) {
+        document.getElementById('cookie-consent-banner').style.display = 'block';
+      }
+    });
+
+    function acceptCookies() {
+      localStorage.setItem('cookie-consent-accepted', 'true');
+      document.getElementById('cookie-consent-banner').style.display = 'none';
+    }
   </script>
+
 </body>
 
 </html>
