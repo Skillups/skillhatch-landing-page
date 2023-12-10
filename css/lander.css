@@ -8,6 +8,7 @@ body {
   color: #495057;
   font-size: 16px;
   line-height: 160%;
+  min-width: 390px;
 }
 
 h1 {
@@ -103,6 +104,10 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+.row.header-elements {
+  flex-direction: row;
+  align-items: flex-end;
 }
 
 .row.items-center {
@@ -735,9 +740,17 @@ a {
   }
 }
 
+@media screen and (max-width: 640px) {
+  .row.header-elements {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
 @media screen and (max-width: 479px) {
   .container.mt-3xl.mb-3xl {
-    margin-top: 64px;
+    margin-top: 130px;
   }
   .row.v-m {
     -webkit-box-orient: vertical;
